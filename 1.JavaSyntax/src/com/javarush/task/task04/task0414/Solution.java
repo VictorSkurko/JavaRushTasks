@@ -20,7 +20,6 @@ package com.javarush.task.task04.task0414;
 Годы 1600 и 2000 — високосные, так как они кратны 100 и кратны 400.
 Годы 2100, 2200 и 2300 — не високосные.
 
-
 Требования:
 1. Программа должна считывать число c клавиатуры.
 2. Программа должна выводить текст на экран.
@@ -35,6 +34,15 @@ import java.io.*;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int year = Integer.parseInt(reader.readLine());
 
+        if (year % 400 == 0) {
+            System.out.println("количество дней в году: 366");
+        } else if (year % 100 != 0 && year % 4 == 0) {
+            System.out.println("количество дней в году: 366");
+        } else {
+            System.out.println("количество дней в году: 365");
+        }
     }
 }
