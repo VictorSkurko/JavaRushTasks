@@ -15,6 +15,10 @@ public class Cat {
 
     public boolean fight(Cat anotherCat) {
         //напишите тут ваш код
+        if (this.strength > anotherCat.strength)
+            return true;
+        else
+            return false;
     }
 
     public static void main(String[] args) {
