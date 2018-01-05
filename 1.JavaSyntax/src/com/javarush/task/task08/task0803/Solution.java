@@ -18,10 +18,16 @@ public class Solution {
         }
     }
 
+
     public static HashMap<String, Cat> addCatsToMap(String[] cats) {
         //напишите тут ваш код
-
+        HashMap<String, Cat> myMap = new HashMap<>();
+        for (String myCat : cats) {
+            myMap.put(myCat, new Cat(myCat));
+        }
+        return myMap;
     }
+
 
     public static class Cat {
         String name;
